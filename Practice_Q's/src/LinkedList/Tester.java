@@ -6,13 +6,17 @@ public class Tester {
 		LinkedList l1=new LinkedList();
 //		LinkedList l2=new LinkedList();
 ////		LinkedList l3=new LinkedList();
-//		l1.insert(10);
-//		l1.insert(20);
-//		l1.insert(30);
-//		l1.insert(10);
-//		l1.insert(20);
-//		l1.insert(30);
-//		l1.display();
+		l1.insert(10);
+		l1.insert(20);
+		l1.insert(30);
+		l1.insert(40);
+		l1.insert(50);
+		l1.insert(60);
+		l1.display();
+		l1.deleteMid();
+		l1.display();
+		l1.deleteMid();
+		l1.display();
 ////		l1.removeDuplicate();
 //		l2.insert(40);
 //		l2.insert(50);
@@ -32,7 +36,7 @@ public class Tester {
 //		l2.insertAsc(6);
 //		l2.display();
 		
-		l1.display();
+//		l1.display();
 	}
 
 }

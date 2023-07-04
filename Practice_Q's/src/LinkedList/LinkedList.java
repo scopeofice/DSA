@@ -269,19 +269,40 @@ public class LinkedList {
 		return true;
 	}
 	
+//	Q.13) Given a linked list and a value x, partition it such that all nodes less than x come before nodes greater than or equal to x.
+//	public boolean partition(int data) {
+//		if(head==null) {
+//			return false;
+//		}
+//		Node temp=head;
+//		while(temp!=null) {
+//			if(temp.getData()<data) {
+//				
+//			}
+//			temp=temp.getNext();
+//		}
+//		
+//		return true;
+//	}
 	
-	public boolean partition(int data) {
+//	Q.14) Delete Middle of Linked List
+	public boolean deleteMid() {
 		if(head==null) {
 			return false;
 		}
-		Node temp=head;
-		while(temp!=null) {
-			if(temp.getData()<data) {
-				
-			}
-			temp=temp.getNext();
+		if(head.getNext()==null) {
+			head.setNext(null);
+			return true;
 		}
-		
+		Node fast=head;
+		Node slow=head;
+		Node prev=null;
+		while(fast!=null && fast.getNext()!=null) {
+			fast=fast.getNext().getNext();
+			prev=slow;
+			slow=slow.getNext();
+		}
+		prev.setNext(slow.getNext());
 		return true;
 	}
 	

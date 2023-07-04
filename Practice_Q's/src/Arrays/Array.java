@@ -26,8 +26,51 @@ public class Array {
 				second=first;
 				first=arr[i];
 			}
+			else if(arr[i]>second) {
+				third=second;
+				second=arr[i];
+			}else if(arr[i]>third) {
+				third=arr[i];
+			}
 		}
-		System.out.println("3rd highest number : "+arr[2]);
+		System.out.println("3rd highest number : "+third);
+		
+		//Q.3) You are given array consisting of n integers. Your task is to find the maximum length of an increasing subarray of the given array.
+		int max=1;
+		int count=1;
+		for(int i=1;i<arr.length;i++) {
+			if(arr[i]>arr[i-1]) {
+				count++;
+			}else {
+				max=Math.max(max, count);
+				count=1;
+			}
+		}
+		max=Math.max(max,count);
+		System.out.println("Maximum length : "+max);
+		
+		
+//	 Q.4) Given an array of size n where all elements are in range from 0 to n-1, change contents of arr[] so that arr[i] = j is changed to arr[j] = i.
+		int [] a= {2,0,4,3,1};
+		for(int i=0;i<a.length;i++) {
+			while(a[i]!=i) {
+				int temp=a[a[i]];
+				a[a[i]]=a[i];
+				a[i]=temp;
+			}
+		}
+		
+		for(int j=0;j<a.length;j++) {
+			System.out.print(a[j]+ " ");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
 		
 	}
 }
