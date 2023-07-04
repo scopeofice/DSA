@@ -305,7 +305,31 @@ public class LinkedList {
 		prev.setNext(slow.getNext());
 		return true;
 	}
-	
+	public boolean sortList() {
+		if(head==null) {
+			return false;
+		}
+		Node temp=null;
+		for(int i=0;i<size;i++) {
+			temp=head;
+			while(temp!=null) {
+				if(temp.getNext()!=null) {
+					if(temp.getData()<temp.getNext().getData()) {
+						int a=temp.getData();
+						temp.setData(temp.getNext().getData());
+						temp.getNext().setData(a);
+						temp=temp.getNext();
+					}else {
+						temp=temp.getNext();	
+					}
+				}else {
+					break;
+				}
+			}
+		}
+		
+		return true;
+	}
 	
 }
 
