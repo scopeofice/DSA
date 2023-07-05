@@ -17,25 +17,27 @@ public class Tester {
 	        bst.insert(100);
 	        bst.insert(55);
 	        bst.insert(80);
+	        
+	        System.out.println("search: "+bst.search(100));
 //		bst.insert(80);
 		System.out.println("InOrder : ");
 		bst.displayInOrder();
 		System.out.println();
+		bst.delete(100);
 		bst.inOrderStack();
 		System.out.println();
-		
 		System.out.println("PostOrder : ");
 		bst.displayPostOrder();
 		System.out.println();
+		bst.delete(10);
 		bst.postOrderStack();
 		System.out.println();
-		
 		System.out.println("PreOrder : ");
 		bst.displayPreOrder();
+		bst.delete(50);
 		System.out.println();
 		bst.preOrderStack();
 		System.out.println();
-		
 		System.out.println("Find :");
 		System.out.println(bst.find(100));
 		System.out.println(bst.findElem(100));
